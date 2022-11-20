@@ -12,3 +12,7 @@ h1 {
 .funny-font {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+.hidden {
+    display: none;
+}

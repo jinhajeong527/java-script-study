@@ -5,19 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <h1 id="title">Grab me</h1>
-    <title>Momentum</title>
+    <title>Momentum App</title>
   </head>
   <body>
-    <!-- <h1 class="hello">Grab me</h1>
-    <h1 class="hello">Grab me</h1>
-    <h1 class="hello">Grab me</h1>
-    <h1 class="hello">Grab me</h1>
-    <h1 class="hello">Grab me</h1>
-    <h1 class="hello">Grab me</h1> -->
-    <div class="hello">
-      <h1 class="funny-font">Grab me 1!</h1>
-    </div>
-    <script src="css-in-javascript.js"></script>
+    <!--
+    버튼이 클릭된 것이 중요한 것이 아니라, form being submitted가 중요하다.
+    로그인 폼 그 자체에 대해 자바스크립트 코드가 작성되어야 한다.
+    -->
+    <form id="login-form" class="hidden">
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+      /><!-- browser is helping me!! -->
+      <input type="submit" value="login" />
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+    <a id="courseLink" href="https://nomadcoders.co">Go to courses</a><!-- link의 디폴트 bahavior는 무엇일까? : click and go somewhere -->
+    <script src="app.js"></script>
   </body>
 </html>
