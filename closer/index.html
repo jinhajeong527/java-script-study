@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function foo() {
+            const x = 1;
+            const y = 2;
+
+            // 일반적으로 클로저라고 하지 않는다.
+            function bar() {
+                const z = 3;
+                
+                debugger;
+                // 상위 스코프의 식별자를 참조하지 않는다.
+                console.log(z);
+                // 상위 스코프의 어떤 식별자도 참조하지 않는 경우 대부분의 모던 브라우저는 최적화를 통해 다음 그림과 같이
+                // 상위 스코프를 기억하지 않는다. 참조하지도 않는 식별자를 기억하는 것은 메모리 낭비이기 때문이다.
+                // 따라서 bar 함수는 클로저라고 할 수 없다.
+
+            }
+            return bar;
+        }
+        const bar = foo();
+        bar();
+    </script>
+    
+</body>
+</html>
