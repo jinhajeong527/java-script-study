@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function foo() {
+            const x = 1;
+            
+            function bar() {
+                debugger;
+                // 상위 스코프의 식별자를 참조한다.
+                console.log(x);
+                // 외부 함수 foo보다 중첩 함수 bar의 생명 주기가 짧다. 이런 경우 중첩 함수 bar는 클로저였지만 외부 함수보다 일찍 소멸되기 때문에 
+                // 생명 주기가 종료된 외부 함수의 식별자를 참조할 수 있다는 클로저의 본질에 부합하지 않는다.
+            }
+            bar();
+        }
+        foo();
+    </script>
+
+</body>
+
+</html>
